@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    background-color: rgb(140, 173, 235);
+}
+
+
+.form-group{
+    padding:10px;
+    margin: 0;
+    background-color:rgb(60, 177, 255) ;
+}
+
+#telephone{
+    padding-bottom: 10px;
+}

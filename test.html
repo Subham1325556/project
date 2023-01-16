@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <div style="display: flex;flex-direction:column; align-items:center;">
+            <input type="file" accept=".jpg , .png">
+            <span style="color: red; margin: 10px;"></span>
+        </div>
+    </form>
+    <script>
+        let input = document.querySelector('input');
+        let span = document.querySelector('span');
+
+        input.addEventListener('change' , ()=> {
+            let files = input.files;
+
+            if (files.length >0){
+                if(files[0].size >2097152){
+                    span.innerText ="file must b less than 2mb";
+                    return ;
+                }
+            }
+            span.innerText="";
+        })
+
+    </script>
+</body>
+</html>
